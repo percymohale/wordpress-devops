@@ -16,6 +16,9 @@
 			<excludes>
 				<exclude>**/*.log</exclude>
 				<exclude>**/${project.build.directory}/**</exclude>
+                                <exclude>**/wp-content/**</exclude>
+                                <exclude>**/wp-admin/**</exclude>
+                                <exclude>**/wp-includes/**</exclude>
 			</excludes>
 		</fileSet>
 	</fileSets>

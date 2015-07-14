@@ -12,7 +12,7 @@ rm -rf *.zip
 
 wget http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/samples/wordpress-devops-demo/$version/wordpress-devops-demo-$version-bin.zip
 
-/usr/bin/osscmd put eventagent-$version-source.zip oss://f2c-sample-apps/wordpress-devops-demo/wordpress-devops-demo-$version-bin.zip
+/usr/bin/osscmd put wordpress-devops-demo-$version-bin.zip oss://f2c-sample-apps/wordpress-devops-demo/wordpress-devops-demo-$version-bin.zip
 /usr/bin/osscmd put maven-metadata.xml oss://f2c-sample-apps/wordpress-devops-demo/maven-metadata.xml
 
 rm -rf *.md5

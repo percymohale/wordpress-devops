@@ -1,0 +1,13 @@
+target
+.project
+.settings
+.classpath
+logs
+*.pyc
+.pydevproject
+*~
+*build
+*egg*
+.idea
+.idea/
+*.iml

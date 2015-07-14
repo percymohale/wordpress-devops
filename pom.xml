@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.fit2cloud.samples</groupId>
+	<artifactId>wordpress-devops-demo</artifactId>
+	<packaging>pom</packaging>
+	<name>Wordpress devops demo</name>
+	<version>1.0-SNAPSHOT</version>
+
+	<properties>
+		<build.timestamp>${maven.build.timestamp}</build.timestamp>
+		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format> 
+	</properties>
+
+	<dependencies>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.3</version>
+				  <configuration>
+				    <descriptor>assembly.xml</descriptor>
+				  </configuration>
+				<executions>
+                    <execution>
+                        <id>bundle-project-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<!-- Publish the versioned releases here -->
+		<repository>
+			<id>fit2cloud</id>
+			<name>fit2cloud</name>
+			<url>http://repository.fit2cloud.com/content/repositories/fit2cloud/</url>
+		</repository>
+	        <snapshotRepository>
+	                <id>fit2cloud-snapshots</id>
+                        <name>fit2cloud-snapshots</name>
+	                <url>http://repository.fit2cloud.com/content/repositories/fit2cloud-snapshots</url>
+	        </snapshotRepository>			
+	</distributionManagement>
+
+	<!-- download artifacts from this repo -->
+	<repositories>
+		<repository>
+			<id>fit2cloud</id>
+			<name>fit2cloud</name>
+			<url>http://repository.fit2cloud.com/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<!-- download plugins from this repo -->
+	<pluginRepositories>
+		<pluginRepository>
+			<id>fit2cloud</id>
+			<name>fit2cloud</name>
+			<url>http://repository.fit2cloud.com/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+</project>

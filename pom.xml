@@ -5,7 +5,7 @@
 	<artifactId>wordpress-devops-demo</artifactId>
 	<packaging>pom</packaging>
 	<name>Wordpress devops demo</name>
-	<version>1.4</version>
+	<version>1.5</version>
 
 	<properties>
 		<build.timestamp>${maven.build.timestamp}</build.timestamp>

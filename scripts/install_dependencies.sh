@@ -1,19 +1,19 @@
 #!/bin/bash
 if [ -f /etc/init.d/mysql* ]; then
-    echo "Mysql已经安装!"
+    echo "Mysql"
 else
 	yum install -y mysql-server	
 	service mysqld start
-	mysqladmin -u root password 'fit2cloud'
+	mysqladmin -u root password 'password'
 	mysql -u root -pfit2cloud -e "create database wordpress"
 	service mysqld stop
-	echo "Mysql安装成功!"
+	echo "MySQl installed!"
 fi
 
 if [ -f /etc/init.d/httpd* ]; then
-    echo "Apache已经安装!"
+    echo "httpd!"
 else
 	yum groupinstall -y "Web Server" "PHP Support"
 	yum install -y php-mysql
-	echo "Apache安装成功!"
+	echo "phpmysql!"
 fi
